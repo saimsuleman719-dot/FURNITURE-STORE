@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium furniture at LuxeLiving. Shop sofas, chairs, tables, and home decor.">
+  <title>LuxeLiving | Premium Furniture</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="top">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Luxe<span>Living.</span></a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#sell" class="nav-cta">Sell Furniture</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">DESIGNED FOR YOUR LIFESTYLE</p>
+        <h1>Make Your Home<br>Feel <span>Beautiful.</span></h1>
+        <p class="hero-description">
+          Discover timeless furniture that brings comfort,
+          elegance, and personality to every corner of your home.
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Explore Collection</a>
+          <a href="#about" class="btn btn-outline">Our Story</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>500+</strong><span>Furniture Designs</span></div>
+          <div><strong>2k+</strong><span>Happy Customers</span></div>
+          <div><strong>10+</strong><span>Years of Style</span></div>
+        </div>
+      </div>
+
+      <div class="hero-image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85"
+          alt="Elegant modern living room with premium furniture">
+        <div class="image-note">
+          <span>✦</span>
+          <div><strong>Comfort meets design</strong><p>Made for modern living</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits container reveal">
+      <div class="benefit"><span>✧</span><div><strong>Premium Quality</strong><p>Made to last</p></div></div>
+      <div class="benefit"><span>♧</span><div><strong>Thoughtful Design</strong><p>Beautifully functional</p></div></div>
+      <div class="benefit"><span>↗</span><div><strong>Reliable Delivery</strong><p>Convenient shopping</p></div></div>
+      <div class="benefit"><span>♡</span><div><strong>Customer Care</strong><p>Here to help</p></div></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Furniture You'll <span>Love</span></h2>
+          <p>Thoughtfully selected pieces for every room and every style.</p>
+        </div>
+
+        <div class="product-controls reveal">
+          <div class="filters" id="filters">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="sofa">Sofas</button>
+            <button class="filter-btn" data-category="chair">Chairs</button>
+            <button class="filter-btn" data-category="table">Tables</button>
+            <button class="filter-btn" data-category="bed">Bedroom</button>
+          </div>
+          <input type="search" id="productSearch" placeholder="Search furniture..." aria-label="Search furniture">
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-message" id="emptyMessage" hidden>No matching furniture found.</p>
+
+        <div class="center-action">
+          <a href="#products" class="btn btn-outline" id="viewAll">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sell Section -->
+    <section class="section sell-section" id="sell">
+      <div class="container sell-layout reveal">
+        <div class="sell-copy">
+          <p class="eyebrow">GIVE FURNITURE A NEW HOME</p>
+          <h2>Have Furniture to <span>Sell?</span></h2>
+          <p>
+            Turn your pre-loved furniture into an opportunity.
+            Submit your item details and let potential buyers discover it.
+          </p>
+          <ul class="check-list">
+            <li>✓ Share your furniture with new buyers</li>
+            <li>✓ Add photos and a price</li>
+            <li>✓ Help quality furniture find a new home</li>
+          </ul>
+          <a href="#products" class="text-link">Browse items instead →</a>
+        </div>
+
+        <form class="form-card" id="sellForm">
+          <h3>List Your Furniture</h3>
+          <p class="form-intro">Enter your item details below.</p>
+
+          <label for="sellerName">Your Name</label>
+          <input id="sellerName" name="sellerName" type="text" placeholder="Full name" required>
+
+          <label for="itemName">Furniture Name</label>
+          <input id="itemName" name="itemName" type="text" placeholder="e.g. Wooden dining table" required>
+
+          <div class="form-row">
+            <div>
+              <label for="itemCategory">Category</label>
+              <select id="itemCategory" name="itemCategory" required>
+                <option value="">Select category</option>
+                <option value="sofa">Sofa</option>
+                <option value="chair">Chair</option>
+                <option value="table">Table</option>
+                <option value="bed">Bedroom</option>
+              </select>
+            </div>
+            <div>
+              <label for="itemPrice">Price (PKR)</label>
+              <input id="itemPrice" name="itemPrice" type="number" min="1" placeholder="25000" required>
+            </div>
+          </div>
+
+          <label for="itemImage">Image URL (optional)</label>
+          <input id="itemImage" name="itemImage" type="url" placeholder="https://example.com/image.jpg">
+
+          <button class="btn btn-primary btn-full" type="submit">List My Furniture</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+            alt="Beautifully styled contemporary furniture and home interior">
+          <div class="about-badge"><strong>10+</strong><span>Years of inspiration</span></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">ABOUT LUXELIVING</p>
+          <h2>Creating Spaces That Feel Like <span>Home.</span></h2>
+          <p>
+            At LuxeLiving, we believe furniture is more than something
+            you place in a room. It is part of the moments, memories,
+            and everyday comfort that make a house your home.
+          </p>
+          <p>
+            Our goal is to make stylish, functional furniture accessible
+            while encouraging thoughtful choices and longer-lasting design.
+          </p>
+          <div class="about-points">
+            <div><strong>01.</strong><span>Quality-first selection</span></div>
+            <div><strong>02.</strong><span>Design for everyday life</span></div>
+            <div><strong>03.</strong><span>Service with care</span></div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Talk to Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="section feedback-section" id="feedback">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">YOUR VOICE MATTERS</p>
+          <h2>Share Your <span>Experience</span></h2>
+          <p>Tell us what you think and help us improve.</p>
+        </div>
+
+        <div class="feedback-layout">
+          <div class="feedback-intro reveal">
+            <h3>Help Us Make It Better</h3>
+            <p>Your feedback helps us improve our products, service, and shopping experience.</p>
+            <div class="feedback-quote">“Great spaces begin with thoughtful choices.”</div>
+          </div>
+
+          <form class="form-card reveal" id="feedbackForm">
+            <label for="feedbackName">Your Name</label>
+            <input id="feedbackName" name="feedbackName" type="text" placeholder="Your name" required>
+
+            <label for="rating">Your Rating</label>
+            <select id="rating" name="rating" required>
+              <option value="">Choose a rating</option>
+              <option value="5">★★★★★ - Excellent</option>
+              <option value="4">★★★★ - Very good</option>
+              <option value="3">★★★ - Good</option>
+              <option value="2">★★ - Fair</option>
+              <option value="1">★ - Needs improvement</option>
+            </select>
+
+            <label for="feedbackMessage">Your Feedback</label>
+            <textarea id="feedbackMessage" name="feedbackMessage" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+            <button type="submit" class="btn btn-primary btn-full">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="section referral-section" id="referral">
+      <div class="container referral-box reveal">
+        <div>
+          <p class="eyebrow">SHARE GOOD DESIGN</p>
+          <h2>Love Our Style? <span>Share It.</span></h2>
+          <p>Invite your friends to explore LuxeLiving and discover furniture for their homes.</p>
+        </div>
+        <div class="referral-action">
+          <label for="referralLink">Your referral link</label>
+          <div class="copy-field">
+            <input id="referralLink" type="text" readonly>
+            <button class="btn btn-primary" id="copyReferral" type="button">Copy Link</button>
+          </div>
+          <p class="small-note" id="copyStatus" aria-live="polite">Share this link with friends.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Let's Talk About <span>Your Space.</span></h2>
+          <p>Questions about a product? We'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info reveal">
+            <div class="contact-item"><span>✉</span><div><strong>Email</strong><p>hello@luxeliving.example</p></div></div>
+            <div class="contact-item"><span>☎</span><div><strong>Phone</strong><p>+92 300 1234567</p></div></div>
+            <div class="contact-item"><span>⌖</span><div><strong>Location</strong><p>Lahore, Pakistan</p></div></div>
+            <p class="small-note">Replace these sample contact details with your real business information.</p>
+          </div>
+
+          <form class="form-card reveal" id="contactForm">
+            <label for="contactName">Full Name</label>
+            <input id="contactName" name="contactName" type="text" placeholder="Your name" required>
+
+            <label for="contactEmail">Email Address</label>
+            <input id="contactEmail" name="contactEmail" type="email" placeholder="you@example.com" required>
+
+            <label for="contactSubject">Subject</label>
+            <input id="contactSubject" name="contactSubject" type="text" placeholder="How can we help?" required>
+
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <a href="#home" class="logo footer-logo">Luxe<span>Living.</span></a>
+        <p>Thoughtful furniture for beautiful everyday living.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#sell">Sell Furniture</a>
+        <a href="#about">About</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#referral">Referral</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> LuxeLiving. All rights reserved.</p>
+      <a href="#home" class="back-home">↑ Back to Home</a>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
